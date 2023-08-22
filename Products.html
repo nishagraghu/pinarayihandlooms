@@ -56,9 +56,8 @@
     <nav id="navScroll" class="navbar navbar-expand-lg navbar-light" tabindex="0">
   <div class="container">
     <a class="navbar-brand pe-4 fs-4" href="/">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
-    <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
-  </svg>
+      <img src="img/webp/logo.webp" width="48" height="85" class="d-inline-block align-top" alt="">
+   
   <span class="ms-1 fw-bolder">Stride</span>
 </a>
 
@@ -73,22 +72,22 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#aboutus">
+    <a class="nav-link" href="./index.html#aboutus">
       About us
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#numbers">
+    <a class="nav-link" href="./index.html#numbers">
       Numbers
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#gallery">
+    <a class="nav-link" href="./index.html#gallery">
       Gallery
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#workwithus">
+    <a class="nav-link" href="./index.html#workwithus">
       Work with us
     </a>
   </li>
@@ -99,12 +98,12 @@
   </li>
 
     </ul>
-      <a href="https://templatedeck.com/stride-html-template.html" data-splitbee-event="Click Download" aria-label="Download this template" class="link-dark pb-1 link-fancy me-2">
+      <!-- <a href="https://templatedeck.com/stride-html-template.html" data-splitbee-event="Click Download" aria-label="Download this template" class="link-dark pb-1 link-fancy me-2">
         Download this Template       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
               </svg>
-      </a>
+      </a> -->
 
     </div>
 </div>
@@ -120,7 +119,7 @@
           <h1 class="display-huge fw-bold lh-1" data-aos="fade-down">Terms
             <span class="fs-4">of</span>
             service</h1>
-            <span class="h6 badge text-bg-light" data-aos="fade-down">Version 1.31, release on Nov. 1st, 2020</span>
+            <span class="h6 badge text-bg-light" data-aos="fade-down">Version 1.31, release on  <span id="date" > </span></span>
           <div class="mt-4 d-flex justify-content-center" data-aos="fade-down" data-aos-delay="200">
             <svg viewbox="0 0 29 107" xmlns="http://www.w3.org/2000/svg" style="width:30px;" data-aos="fade-down">
               <path d="M15.425 106.639l13.116-12.42c.55-.446.615-1.23.144-1.751a1.363 1.363 0 0 0-1.993 0l-10.887 10.296V1.242C15.805.556 15.218 0 14.493 0c-.724 0-1.311.556-1.311 1.242v101.522L2.308 92.468a1.363 1.363 0 0 0-1.85-.136 1.197 1.197 0 0 0 0 1.887l13.117 12.42a1.364 1.364 0 0 0 1.85 0z" fill="#000" fill-rule="evenodd"></path>
@@ -348,6 +347,11 @@
 
     console.log(scrollpos)
   })
+  // update date to current date -1 month 
+  var date = new Date();
+  var lastMonth = date.getMonth() - 1;
+  date.setMonth(lastMonth);
+  document.getElementById("date").innerHTML = date.toDateString();
 </script>
 
   </body>
